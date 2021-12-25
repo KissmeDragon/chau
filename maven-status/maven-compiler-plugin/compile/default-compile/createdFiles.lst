@@ -1,0 +1,15 @@
+uk/ac/ed/inf/mpatsis/sstubs/core/MinedBug.class
+uk/ac/ed/inf/mpatsis/sstubs/core/BugInstance.class
+uk/ac/ed/inf/mpatsis/sstubs/core/MinedSStuB.class
+uk/ac/ed/inf/mpatsis/sstubs/core/BugType.class
+uk/ac/ed/inf/mpatsis/utils/ExtractRepoHeads.class
+uk/ac/ed/inf/mpatsis/sstubs/mining/EditType.class
+uk/ac/ed/inf/mpatsis/utils/ModifiedLinesCounter.class
+uk/ac/ed/inf/mpatsis/sstubs/AST/RefactoredFunctionsVisitor.class
+uk/ac/ed/inf/mpatsis/sstubs/mining/SStuBsMiner$1.class
+edu/stanford/nlp/process/Stemmer.class
+uk/ac/ed/inf/mpatsis/sstubs/mining/SStuBsMiner.class
+uk/ac/ed/inf/mpatsis/sstubs/AST/RefactoredVariablesVisitor.class
+uk/ac/ed/inf/mpatsis/sstubs/mining/RefactoredVariable.class
+uk/ac/ed/inf/mpatsis/sstubs/mining/RefactoredFunction.class
+uk/ac/ed/inf/mpatsis/sstubs/AST/ASTDifferenceLocator.class
