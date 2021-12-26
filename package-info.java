@@ -18,7 +18,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 @ParametersAreNonnullByDefault
-package org.sonar.plugins.surefire.data;
+package org.sonar.plugins.surefire.api;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
