@@ -17,16 +17,35 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package org.sonar.plugins.surefire;
+package org.sonar.plugins.surefire.data;
 
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class SurefireExtensionsTest {
+class UnitTestResultTest {
 
   @Test
-  void shouldGetExtensions() {
-    assertThat(SurefireExtensions.getExtensions().size()).isEqualTo(3);
+  void shouldBeError() {
+    UnitTestResult result = new UnitTestResult().setStatus(UnitTestResult.STATUS_ERROR);
+    assertThat(result.getStatus()).isEqualTo(UnitTestResult.STATUS_ERROR);
+    assertThat(result.isError()).isTrue();
+    assertThat(result.isErrorOrFailure()).isTrue();
+  }
+
+  @Test
+  void shouldBeFailure() {
+    UnitTestResult result = new UnitTestResult().setStatus(UnitTestResult.STATUS_FAILURE);
+    assertThat(result.getStatus()).isEqualTo(UnitTestResult.STATUS_FAILURE);
+    assertThat(result.isError()).isFalse();
+    assertThat(result.isErrorOrFailure()).isTrue();
+  }
+
+  @Test
+  void shouldBeSuccess() {
+    UnitTestResult result = new UnitTestResult().setStatus(UnitTestResult.STATUS_OK);
+    assertThat(result.getStatus()).isEqualTo(UnitTestResult.STATUS_OK);
+    assertThat(result.isError()).isFalse();
+    assertThat(result.isErrorOrFailure()).isFalse();
   }
 }
