@@ -17,8 +17,16 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-@ParametersAreNonnullByDefault
-package org.sonar.plugins.surefire.api;
+package org.sonar.plugins.surefire;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+class SurefireExtensionsTest {
+
+  @Test
+  void shouldGetExtensions() {
+    assertThat(SurefireExtensions.getExtensions().size()).isEqualTo(3);
+  }
+}
