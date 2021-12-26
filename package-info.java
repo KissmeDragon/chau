@@ -17,28 +17,8 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package org.sonar.java.externalreport;
+@ParametersAreNonnullByDefault
+package org.sonar.plugins.java;
 
-import org.sonar.api.server.rule.RulesDefinition;
-import org.sonarsource.analyzer.commons.ExternalRuleLoader;
+import javax.annotation.ParametersAreNonnullByDefault;
 
-public class ExternalRulesDefinition implements RulesDefinition {
-
-  private final ExternalRuleLoader ruleLoader;
-  private final String linterKey;
-
-  public ExternalRulesDefinition(ExternalRuleLoader ruleLoader, String linterKey) {
-    this.ruleLoader = ruleLoader;
-    this.linterKey = linterKey;
-  }
-
-  @Override
-  public void define(Context context) {
-    ruleLoader.createExternalRuleRepository(context);
-  }
-
-  @Override
-  public String toString() {
-    return linterKey+"-rules-definition";
-  }
-}
